@@ -71,6 +71,7 @@ function limpiarCaja(){
     textoCaja.value = '';
 }
 
+//Creando la funcion para el boton copiar.
 function copiar() {
     let button = document.getElementById('botonCopiar');
     let input = document.getElementById('textField');

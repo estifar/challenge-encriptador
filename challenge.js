@@ -21,11 +21,7 @@ function encriptarTexto() {
         borrarImagen.alt = 'Imagen vacia para que la caja quede libre';
     }
     else{
-        textoEncriptado.innerHTML = 'Ningún mensaje fue encontrado';
-        parrafo.innerHTML = 'Ingresa el texto que desees encriptar o desenceriptar.';
-        parrafo.style.fontSize = '1em';
-        borrarImagen.src = 'Imagenes/chicoydiamante.png';
-        borrarImagen.alt = 'Chico observando diamante con una lupa';
+        textoVacio();
     }
     limpiarCaja();
     return;
@@ -54,11 +50,7 @@ function desencriptarTexto(){
         borrarImagen.alt = 'Imagen vacia para que la caja quede libre';
     }
     else{
-        textoEncriptado.innerHTML = 'Ningún mensaje fue encontrado';
-        parrafo.innerHTML = 'Ingresa el texto que desees encriptar o desenceriptar.';
-        parrafo.style.fontSize = '1em';
-        borrarImagen.src = 'Imagenes/chicoydiamante.png';
-        borrarImagen.alt = 'Chico observando diamante con una lupa';
+        textoVacio();
     }
     limpiarCaja();
     return;
@@ -75,6 +67,10 @@ function limpiarCaja(){
 function copiarTexto() {
     let elmento = document.getElementById('parrafo');
     let inputOculto = document.createElement('input');
+    document.querySelector('.mensajeCopy').classList.add('show');
+    setTimeout(()=>{
+        document.querySelector('.mensajeCopy').classList.remove('show');
+    }, 800);
     inputOculto.setAttribute('value', elmento.innerText);
     document.body.appendChild(inputOculto);   
     inputOculto.select();
@@ -82,6 +78,17 @@ function copiarTexto() {
     document.body.removeChild(inputOculto);
 }
 
+function textoVacio(){
+    let textoEncriptado = document.getElementById('textoEncriptado');
+    let parrafo = document.getElementById('parrafo');
+    let borrarImagen = document.getElementById('picture');
+    textoEncriptado.innerHTML = 'Ningún mensaje fue encontrado';
+    parrafo.innerHTML = 'Ingresa el texto que desees encriptar o desenceriptar.';
+    parrafo.style.marginTop = '5px';
+    parrafo.style.fontSize = '1em';
+    borrarImagen.src = 'Imagenes/chicoydiamante.png';
+    borrarImagen.alt = 'Chico observando diamante con una lupa';
+}
 
 encriptarTexto(); 
 desencriptarTexto();

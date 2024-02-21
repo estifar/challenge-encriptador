@@ -46,6 +46,7 @@ header{
     border-radius: 20px;
     background: #FFFFFF;
     width: 400px;
+    overflow: auto;
 }
 
 .avisoTexto{
@@ -89,12 +90,11 @@ header{
     padding: 15px 0;
     font-size: 18px;
     color: white;
-    background: #00239C;
+    background: #273d75;
     border-color: #000000;
     border-radius: 15px;
     cursor: pointer;
     margin-left: 210px;
-    
 }
 
 .botonDesencriptar{
@@ -102,7 +102,7 @@ header{
     width: 18%;
     padding: 15px 0;
     font-size: 18px;
-    color: #00239C;
+    color: #273d75;
     background: white;
     border-color: #00239C;
     border-radius: 15px;
@@ -114,8 +114,8 @@ header{
     width: 18%;
     padding: 15px 0;
     font-size: 18px;
-    color: #00239C;
-    background: white;
+    color: #FFFFFF;
+    background: #273d75;
     border-color: #00239C;
     border-radius: 15px;
     cursor: pointer;

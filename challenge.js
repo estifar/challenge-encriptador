@@ -16,7 +16,7 @@ function encriptarTexto() {
         textoEncriptado.innerHTML = 'El texto encriptado es:'
         parrafo.innerHTML = textoEntrada;
         parrafo.style.fontSize = '1.5em';
-        parrafo.style.marginTop = '100px';
+        parrafo.style.marginTop = '50px';
         borrarImagen.src = 'Imagenes/imagenvacia.jpg';
         borrarImagen.alt = 'Imagen vacia para que la caja quede libre';
     }
@@ -49,7 +49,7 @@ function desencriptarTexto(){
         textoEncriptado.innerHTML = 'El texto desencriptado es:'
         parrafo.innerHTML = textoSalida;
         parrafo.style.fontSize = '1.5em';
-        parrafo.style.marginTop = '100px';
+        parrafo.style.marginTop = '50px';
         borrarImagen.src = 'Imagenes/imagenvacia.jpg';
         borrarImagen.alt = 'Imagen vacia para que la caja quede libre';
     }
@@ -72,13 +72,14 @@ function limpiarCaja(){
 }
 
 //Creando la funcion para el boton copiar.
-function copiar() {
-    let button = document.getElementById('botonCopiar');
-    let input = document.getElementById('textField');
-    
-    button.addEventListener('click', function(){
-        input.focus();
-    })
+function copiarTexto() {
+    let elmento = document.getElementById('parrafo');
+    let inputOculto = document.createElement('input');
+    inputOculto.setAttribute('value', elmento.innerText);
+    document.body.appendChild(inputOculto);   
+    inputOculto.select();
+    document.execCommand('copy');
+    document.body.removeChild(inputOculto);
 }
 
 

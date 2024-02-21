@@ -1,0 +1,1 @@
+Fue creada una funcion para borrar el texto de entrada inmediatamente se presiona uno de los botones encriptar/desencriptar. Por seguridad no se debe ver el texto original con el texto encriptado en la misma pantalla.

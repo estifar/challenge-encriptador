@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Challenge: Ecriptador de texto</title>
+    <link rel="shortcut icon" href="Imagenes/logo-alura.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="caja">
+            <img src="Imagenes/logo-alura.png" alt="Logo de Alura" class="imagenEncabezado">
+        </div>
+        <div class="encabezado">
+            <p class="titulo">Challenge Alura: Encriptador de texto.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="cajasDeTexto">
+            <div>
+                <div class="caja1">
+                    <textarea cols="50" rows="17" id="textField" class="entradaDeTexto" required placeholder="Ingrese el texto aquí:"></textarea >
+                    <p class="advertencia">&#9888 Solo letras minúsculas y sin acentos o simbolos.</p>
+                    </div>
+                <div class="caja2">
+                    <img src="Imagenes/chicoydiamante.png" alt="chico observando un diamante con lupa" id="picture">
+                    <p class="avisoTexto" id="textoEncriptado">Ningún mensaje fue encontrado</p>
+                    <p id="parrafo">Ingresa el texto que desees encriptar o desenceriptar.</p>      
+                </div>
+            </div>
+            
+        </div>
+        <div>
+            <button onclick="encriptarTexto();" class="botonEncriptar">Encriptar</button>;
+            <button onclick="desencriptarTexto();" class="botonDesencriptar">Desencriptar</button>;
+            <button onclick="copiarTexto();" id="botonCopiar" class="botonCopy">Copiar</button>;
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copyestifar 2024</p>
+    </footer>
+
+    <script src="challenge.js" defer></script>
+</body>
+</html>
